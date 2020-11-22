@@ -9,7 +9,7 @@ spec:
   source:
     path: app-prerequisites/overlays/local/dev/opstools/ingress-nginx
     repoURL: 'https://github.com/subhakar-ci-cd/k8s-argocd-apps'
-    targetRevision: master
+    targetRevision: HEAD
   project: default
 ---
 apiVersion: argoproj.io/v1alpha1
