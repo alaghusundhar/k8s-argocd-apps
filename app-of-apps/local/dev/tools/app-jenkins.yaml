@@ -20,7 +20,7 @@ metadata:
 spec:
   destination:
     name: ''
-    namespace: opstools
+    namespace: ns-opstools
     server: 'https://kubernetes.default.svc'
   source:
     path: charts/jenkins
