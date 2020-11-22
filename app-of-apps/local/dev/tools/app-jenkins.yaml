@@ -1,0 +1,30 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app-preq-jenkins
+spec:
+  destination:
+    namespace: argocd
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: app-prerequisites/overlays/local/dev/opstools
+    repoURL: 'https://github.com/subhakar-ci-cd/k8s-argocd-apps'
+    targetRevision: master
+  project: default
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app-jenkins
+  namespace: argocd
+project: default
+source:
+  repoURL: 'https://github.com/subhakar-ci-cd/helm-charts'
+  path: charts/jenkins
+  targetRevision: HEAD
+  helm:
+    valueFiles:
+      - values.yaml
+destination:
+  server: 'https://kubernetes.default.svc'
+  namespace: ns-opstools
