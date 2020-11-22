@@ -27,6 +27,6 @@ spec:
     repoURL: 'https://github.com/subhakar-ci-cd/helm-charts'
     targetRevision: HEAD
     helm:
-    valueFiles:
+     valueFiles:
       - values.yaml
   project: default
