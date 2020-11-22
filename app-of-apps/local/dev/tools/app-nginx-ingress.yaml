@@ -11,6 +11,11 @@ spec:
     repoURL: 'https://github.com/subhakar-ci-cd/k8s-argocd-apps'
     targetRevision: HEAD
   project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions: []
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
