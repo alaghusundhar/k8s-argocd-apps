@@ -27,8 +27,3 @@ spec:
     repoURL: 'https://github.com/subhakar-ci-cd/helm-charts'
     targetRevision: HEAD
   project: default
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-    syncOptions: []
