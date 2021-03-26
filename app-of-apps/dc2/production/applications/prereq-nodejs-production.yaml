@@ -15,4 +15,4 @@ spec:
    automated:
      selfHeal: true
      prune: true
-  project: experience
+  project: default
