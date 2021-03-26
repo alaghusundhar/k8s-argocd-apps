@@ -1,0 +1,36 @@
+kind: Application
+metadata:
+  name: prereq-app-hello-kubernetes
+  namespace: argocd
+spec:
+  destination:
+    namespace: nsnodejs
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: app-prerequisites/overlays/dc2/production/applications
+    repoURL: 'https://github.com/s-u-b-h-a-k-a-r-cicd/k8s-argocd-apps'
+    targetRevision: HEAD
+  syncPolicy:
+   automated:
+     selfHeal: true
+     prune: true
+  project: default
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app-hello-kubernetes
+  namespace: argocd
+spec:
+  destination:
+    namespace: nsnodejs
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: app-prerequisites/overlays/dc2/production/applications
+    repoURL: 'https://github.com/s-u-b-h-a-k-a-r-cicd/hello-kubernetes-prod-config'
+    targetRevision: HEAD
+  syncPolicy:
+   automated:
+     selfHeal: true
+     prune: true
+  project: default
