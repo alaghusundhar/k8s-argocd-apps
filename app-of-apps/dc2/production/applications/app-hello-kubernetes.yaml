@@ -27,7 +27,7 @@ spec:
     namespace: nsnodejs
     server: 'https://kubernetes.default.svc'
   source:
-    path: app-prerequisites/overlays/dc2/production/applications
+    path: dc2/
     repoURL: 'https://github.com/s-u-b-h-a-k-a-r-cicd/hello-kubernetes-prod-config'
     targetRevision: HEAD
   syncPolicy:
