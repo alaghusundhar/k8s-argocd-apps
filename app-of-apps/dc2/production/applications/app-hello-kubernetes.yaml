@@ -24,7 +24,7 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    namespace: nsnodejs
+    namespace: nodejs
     server: 'https://kubernetes.default.svc'
   source:
     path: dc2/
