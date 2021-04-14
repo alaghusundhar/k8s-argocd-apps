@@ -9,7 +9,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   source:
     path: dc2/
-    repoURL: 'https://github.com/s-u-b-h-a-k-a-r-cicd/hello-kubernetes-prod-config'
+    repoURL: 'https://github.com/alaghusundhar/hello-kubernetes-prod-config'
     targetRevision: HEAD
   syncPolicy:
    automated:
